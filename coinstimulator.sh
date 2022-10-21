@@ -1,3 +1,5 @@
+
+#!/bin/bash -x
 target_count=21
 minimum_difference=2
 heads_count=0
@@ -25,7 +27,8 @@ if(( heads_count == target_count && diff_bt_hc_tc >= minimum_difference))
 elif(( tail_count == target_count && ${diff-bt_hc_tc} >=minimum_difference))
       then
           echo "tails won by ${diff_bt_hc_tc}points"
-      break
+          break
+      
 fi
 done
 echo"the head count is $heads_count tail count is $tails_count"
